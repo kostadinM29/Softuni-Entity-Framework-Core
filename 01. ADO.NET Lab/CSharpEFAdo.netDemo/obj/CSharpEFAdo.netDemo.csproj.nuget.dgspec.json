@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\01. ADO.NET Lab\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\01. ADO.NET Lab\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\01. ADO.NET Lab\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj",
         "projectName": "CSharpEFAdo.netDemo",
-        "projectPath": "C:\\Users\\User\\source\\repos\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\01. ADO.NET Lab\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\CSharpEFAdo.netDemo\\CSharpEFAdo.netDemo\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\01. ADO.NET Lab\\CSharpEFAdo.netDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
