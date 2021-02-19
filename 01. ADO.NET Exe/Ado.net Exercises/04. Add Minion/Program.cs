@@ -1,11 +1,11 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Microsoft.Data.SqlClient;
 
 namespace _04._Add_Minion
 {
     class Program
     {
-        private static SqlCommand getMinionIdCommand;
 
         static void Main(string[] args)
         {
@@ -24,9 +24,9 @@ namespace _04._Add_Minion
             using (connection)
             {
                 // select town
-                int townId = GetTownId(connection, newMinionTown);
+                var townId = GetTownId(connection, newMinionTown);
                 //select villain
-                int villainId = GetVillainId(connection, villainName);
+                var villainId = GetVillainId(connection, villainName);
 
                 if (townId == 0) // if town doesn't exist make new town with id 5
                 {
@@ -44,7 +44,7 @@ namespace _04._Add_Minion
                 // create minion with townid
                 InsertNewMinion(connection, townId, newMinionName, newMinionAge);
                 //select new minion
-                int minionId = GetMinionId(connection, newMinionName);
+                var minionId = GetMinionId(connection, newMinionName);
                 //assign minion
                 CreateConnectionBetweenVillainAndMinion(connection, minionId, villainId, newMinionName, villainName);
             }
@@ -55,25 +55,43 @@ namespace _04._Add_Minion
             using var getVillainIdCommand = new SqlCommand(@"SELECT Id FROM Villains WHERE [Name] = @villainName", sqlConnection);
             getVillainIdCommand.Parameters.AddWithValue("@villainName", villainName);
 
-            return (int)getVillainIdCommand.ExecuteScalar();
+            var result = getVillainIdCommand.ExecuteScalar();
+            if (result == null)
+            {
+                return 0;
+            }
+
+            return (int)result;
         }
         public static int GetTownId(SqlConnection sqlConnection, string minionTown)
         {
             using var getTownIdCommand = new SqlCommand(@"SELECT Id FROM Towns WHERE [Name] = @townName", sqlConnection);
             getTownIdCommand.Parameters.AddWithValue("@townName", minionTown);
 
-            return (int)getTownIdCommand.ExecuteScalar();
+            var result = getTownIdCommand.ExecuteScalar();
+            if (result == null)
+            {
+                return 0;
+            }
+
+            return (int) result;
         }
         private static int GetMinionId(SqlConnection connection, string newMinionName)
         {
-            getMinionIdCommand = new SqlCommand("SELECT * FROM Minions WHERE Name = @newMinionName", connection);
+            using var getMinionIdCommand = new SqlCommand("SELECT * FROM Minions WHERE Name = @newMinionName", connection);
             getMinionIdCommand.Parameters.AddWithValue("@newMinionName", newMinionName);
 
-            return (int)getMinionIdCommand.ExecuteScalar();
+            var result = getMinionIdCommand.ExecuteScalar();
+            if (result == null)
+            {
+                return 0;
+            }
+
+            return (int) result;
         }
         private static void InsertNewTown(SqlConnection connection, string newMinionTown)
         {
-            var townCommand = new SqlCommand("INSERT INTO Towns (Name, CountryId) VALUES (@newMinionTown, 5)", connection); // new town Id
+            using var townCommand = new SqlCommand("INSERT INTO Towns (Name, CountryCode) VALUES (@newMinionTown, 5)", connection); // new town Id
             townCommand.Parameters.AddWithValue("@newMinionTown", newMinionTown);
 
             townCommand.ExecuteNonQuery();
@@ -81,15 +99,14 @@ namespace _04._Add_Minion
         }
         private static void InsertNewVillain(SqlConnection connection, string villainName)
         {
-            var villainCommand =
-                new SqlCommand("INSERT INTO Villains (Name, EvilnessFactorId) VALUES (@villainName, 4)", connection); // default factor - evil
+            using var villainCommand = new SqlCommand("INSERT INTO Villains (Name, EvilnessFactorId) VALUES (@villainName, 4)", connection); // default factor - evil
             villainCommand.Parameters.AddWithValue("@villainName", villainName);
             villainCommand.ExecuteNonQuery();
             Console.WriteLine($"Villain {villainName} was added to the database.");
         }
         private static void InsertNewMinion(SqlConnection connection, int townId, string newMinionName, int newMinionAge)
         {
-            var minionCommand = new SqlCommand("INSERT INTO Minions (Name, Age, TownId) VALUES (@newMinionName, @newMinionAge, @townId)", connection);
+            using var minionCommand = new SqlCommand("INSERT INTO Minions (Name, Age, TownId) VALUES (@newMinionName, @newMinionAge, @townId)", connection);
             minionCommand.Parameters.AddWithValue("@townId", townId);
             minionCommand.Parameters.AddWithValue("@newMinionName", newMinionName);
             minionCommand.Parameters.AddWithValue("@newMinionAge", newMinionAge);
@@ -98,7 +115,7 @@ namespace _04._Add_Minion
         }
         private static void CreateConnectionBetweenVillainAndMinion(SqlConnection connection, int minionId, int villainId, string newMinionName, string villainName)
         {
-            var command = new SqlCommand("INSERT INTO MinionsVillains (MinionId, VillainId) VALUES (@minionId, @villainId)", connection);
+            using var command = new SqlCommand("INSERT INTO MinionsVillains (MinionId, VillainId) VALUES (@minionId, @villainId)", connection);
             command.Parameters.AddWithValue("@minionId", minionId);
             command.Parameters.AddWithValue("@villainId", villainId);
 
