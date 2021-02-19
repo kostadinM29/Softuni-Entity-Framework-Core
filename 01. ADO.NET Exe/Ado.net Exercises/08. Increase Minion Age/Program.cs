@@ -19,15 +19,17 @@ namespace _08._Increase_Minion_Age
                 foreach (int id in ids)
                 {
                     // update the age of each minion individually 
-                    SqlCommand command = new SqlCommand("UPDATE Minions SET Age += 1 WHERE Id = @id", connection);
+                    using SqlCommand command = new SqlCommand(@"UPDATE Minions
+                                                          SET Name = UPPER(LEFT(Name, 1)) + SUBSTRING(Name, 2, LEN(Name)), Age += 1
+                                                          WHERE Id = @Id", connection);
                     command.Parameters.AddWithValue("@id", id);
 
                     command.ExecuteNonQuery();
                 }
 
                 //read changed minions
-                SqlCommand selectCommand = new SqlCommand("SELECT * FROM Minions", connection);
-                SqlDataReader reader = selectCommand.ExecuteReader();
+                using SqlCommand selectCommand = new SqlCommand("SELECT * FROM Minions", connection);
+                using SqlDataReader reader = selectCommand.ExecuteReader();
 
                 while (reader.Read())
                 {
