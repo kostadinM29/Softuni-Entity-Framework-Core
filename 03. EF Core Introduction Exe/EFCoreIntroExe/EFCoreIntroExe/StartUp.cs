@@ -127,9 +127,9 @@ namespace SoftUni
 
             StringBuilder sb = new StringBuilder();
 
-            foreach (var adress in addresses)
+            foreach (var address in addresses)
             {
-                sb.AppendLine(adress.AddressText);
+                sb.AppendLine(address.AddressText);
             }
 
             return sb.ToString().TrimEnd();
