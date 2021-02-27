@@ -31,7 +31,7 @@ namespace P01_StudentSystem.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=SoftUni;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=StudentSystemDB;Integrated Security=True");
             }
             base.OnConfiguring(optionsBuilder);
         }

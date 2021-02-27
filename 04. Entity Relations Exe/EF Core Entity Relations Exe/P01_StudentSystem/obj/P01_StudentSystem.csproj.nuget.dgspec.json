@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj",
         "projectName": "P01_StudentSystem",
-        "projectPath": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P01_StudentSystem\\P01_StudentSystem.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P01_StudentSystem\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P01_StudentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

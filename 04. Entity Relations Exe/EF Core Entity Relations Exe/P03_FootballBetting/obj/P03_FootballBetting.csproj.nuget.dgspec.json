@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj",
         "projectName": "P03_FootballBetting",
-        "projectPath": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P03_FootballBetting\\P03_FootballBetting.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\EF Core Entity Relations Exe\\P03_FootballBetting\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\04. Entity Relations Exe\\EF Core Entity Relations Exe\\P03_FootballBetting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

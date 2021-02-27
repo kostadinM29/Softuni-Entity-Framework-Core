@@ -32,7 +32,7 @@ namespace P03_FootballBetting.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=SoftUni;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Server=.\SQLEXPRESS;Database=FootBallBettingDB;Integrated Security=True");
             }
             base.OnConfiguring(optionsBuilder);
         }
