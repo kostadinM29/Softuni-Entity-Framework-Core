@@ -14,7 +14,7 @@ namespace SoftUni
             var context = new SoftUniContext();
             using (context)
             {
-                var output = GetEmployeesByFirstNameStartingWithSa(context);
+                var output = GetEmployeesInPeriod(context);
                 Console.WriteLine(output);
             }
         }

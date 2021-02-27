@@ -6890,11 +6890,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\EFCoreIntroExe\\EFCoreIntroExe\\SoftUni.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\03. EF Core Introduction Exe\\EFCoreIntroExe\\EFCoreIntroExe\\SoftUni.csproj",
       "projectName": "SoftUni",
-      "projectPath": "C:\\Users\\User\\source\\repos\\EFCoreIntroExe\\EFCoreIntroExe\\SoftUni.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\03. EF Core Introduction Exe\\EFCoreIntroExe\\EFCoreIntroExe\\SoftUni.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\EFCoreIntroExe\\EFCoreIntroExe\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\03. EF Core Introduction Exe\\EFCoreIntroExe\\EFCoreIntroExe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
