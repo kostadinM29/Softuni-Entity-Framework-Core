@@ -23,6 +23,6 @@ namespace P01_HospitalDatabase.Data.Models
         [Column(TypeName = "nvarchar(100)")]
         public string Specialty { get; set; }
 
-        public ICollection<Visitation> Visitations { get; set; }
+        public virtual ICollection<Visitation> Visitations { get; set; }
     }
 }
