@@ -10,7 +10,7 @@ using P03_FootballBetting.Data;
 namespace P03_FootballBetting.Migrations
 {
     [DbContext(typeof(FootballBettingContext))]
-    [Migration("20210226192914_InitialCreate")]
+    [Migration("20210303110206_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -310,13 +310,13 @@ namespace P03_FootballBetting.Migrations
                     b.HasOne("P03_FootballBetting.Data.Models.Team", "AwayTeam")
                         .WithMany("AwayGames")
                         .HasForeignKey("AwayTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("P03_FootballBetting.Data.Models.Team", "HomeTeam")
                         .WithMany("HomeGames")
                         .HasForeignKey("HomeTeamId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -355,13 +355,13 @@ namespace P03_FootballBetting.Migrations
                     b.HasOne("P03_FootballBetting.Data.Models.Color", "PrimaryKitColor")
                         .WithMany("PrimaryKitTeams")
                         .HasForeignKey("PrimaryKitColorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("P03_FootballBetting.Data.Models.Color", "SecondaryKitColor")
                         .WithMany("SecondaryKitTeams")
                         .HasForeignKey("SecondaryKitColorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("P03_FootballBetting.Data.Models.Town", "Town")

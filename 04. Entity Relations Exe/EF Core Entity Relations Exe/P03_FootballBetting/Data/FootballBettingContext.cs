@@ -47,6 +47,29 @@ namespace P03_FootballBetting.Data
                     ps.PlayerId
                 });
             });
+            modelBuilder.Entity<Team>(e =>
+            {
+                e
+                    .HasOne(t => t.PrimaryKitColor)
+                    .WithMany(c => c.PrimaryKitTeams)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                e
+                    .HasOne(t => t.SecondaryKitColor)
+                    .WithMany(c => c.SecondaryKitTeams)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+            modelBuilder.Entity<Game>(e =>
+            {
+                e.HasOne(g => g.AwayTeam)
+                    .WithMany(t => t.AwayGames)
+                    .OnDelete(DeleteBehavior.Restrict);
+
+                e.HasOne(g => g.HomeTeam)
+                    .WithMany(t => t.HomeGames)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
 
             base.OnModelCreating(modelBuilder);
         }
