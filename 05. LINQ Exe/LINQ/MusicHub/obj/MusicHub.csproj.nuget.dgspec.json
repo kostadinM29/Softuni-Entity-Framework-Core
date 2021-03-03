@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\MusicHub.csproj": {}
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\MusicHub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\MusicHub.csproj": {
+    "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\MusicHub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\MusicHub.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\MusicHub.csproj",
         "projectName": "MusicHub",
-        "projectPath": "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\MusicHub.csproj",
+        "projectPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\MusicHub.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\obj\\",
+        "outputPath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

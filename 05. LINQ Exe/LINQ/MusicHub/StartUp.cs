@@ -20,7 +20,7 @@ namespace MusicHub
             DbInitializer.ResetDatabase(context);
 
             var albums = ExportAlbumsInfo(context, 9);
-            //Console.WriteLine(albums);
+            Console.WriteLine(albums);
 
             var songs = ExportSongsAboveDuration(context, 4);
             Console.WriteLine(songs);
@@ -36,7 +36,7 @@ namespace MusicHub
              Sort the Albums by their Total Price (descending).*/
             var albums = context
                 .Albums
-                .ToList()// need to do this otherwise i get cannot be translated error
+                .ToList()// need to load producer or else its null
                 .Where(a => a.Producer.Id == producerId)
                 .Select(a => new
                 {
@@ -49,7 +49,6 @@ namespace MusicHub
                         Price = s.Price,
                         Writer = s.Writer.Name
                     })
-                        .ToList() // need to do this otherwise i get cannot be translated error
                         .OrderByDescending(s => s.SongName)
                         .ThenBy(s => s.Writer)
                         .ToList(),
@@ -93,7 +92,7 @@ namespace MusicHub
 
             var songs = context
                 .Songs
-                .ToList()
+                .ToList() // need to load duration or else it doesn't work
                 .Where(s => s.Duration.TotalSeconds > duration)
                 .Select(s => new
                 {

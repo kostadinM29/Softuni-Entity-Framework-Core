@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zg49K+cJ/3ix71nDdear0p0mzRAPcMrSOETZRwGZELXLrrXGAf5eDAqEcmNX7QVUWH4JxTeX9Ns0RzZ7WbEaaA==",
+  "dgSpecHash": "WbhEi/xw6yjYnHQGYEdD/ADQvkRZybBA9YFmOjbM5P9DNQpqat/o96PrPgc1eSTF0rSQDnG7SuDmbmzZw74bOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\05. LINQ Exe\\MusicHub\\MusicHub.csproj",
+  "projectFilePath": "C:\\Users\\User\\Documents\\GitHub\\Softuni-Entity-Framework-Core\\05. LINQ Exe\\LINQ\\MusicHub\\MusicHub.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
