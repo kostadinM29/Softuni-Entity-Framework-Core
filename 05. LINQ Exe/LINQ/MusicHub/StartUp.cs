@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Linq;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 using MusicHub.Data.Models;
 
 namespace MusicHub
@@ -17,7 +18,9 @@ namespace MusicHub
             MusicHubDbContext context =
                 new MusicHubDbContext();
 
-            DbInitializer.ResetDatabase(context);
+            //DbInitializer.ResetDatabase(context);
+
+
 
             var albums = ExportAlbumsInfo(context, 9);
             Console.WriteLine(albums);
@@ -36,8 +39,7 @@ namespace MusicHub
              Sort the Albums by their Total Price (descending).*/
             var albums = context
                 .Albums
-                .ToList()// need to load producer or else its null
-                .Where(a => a.Producer.Id == producerId)
+                .Where(a => a.ProducerId == producerId)
                 .Select(a => new
                 {
                     AlbumName = a.Name,
@@ -54,6 +56,7 @@ namespace MusicHub
                         .ToList(),
                     AlbumPrice = a.Price // total album price?
                 })
+                .ToList()
                 .OrderByDescending(a => a.AlbumPrice)
                 .ToList();
 
@@ -91,8 +94,11 @@ namespace MusicHub
              Sort the Songs by their Name (ascending), by Writer (ascending) and by Performer (ascending).*/
 
             var songs = context
-                .Songs
-                .ToList() // need to load duration or else it doesn't work
+                .Songs // have to do the includes or else it gives exc
+                .Include(s=>s.Writer)
+                .Include(s=>s.Album)
+                .ThenInclude(a=>a.Producer)
+                .ToList()
                 .Where(s => s.Duration.TotalSeconds > duration)
                 .Select(s => new
                 {
