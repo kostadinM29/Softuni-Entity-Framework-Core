@@ -18,9 +18,7 @@ namespace MusicHub
             MusicHubDbContext context =
                 new MusicHubDbContext();
 
-            //DbInitializer.ResetDatabase(context);
-
-
+            DbInitializer.ResetDatabase(context);
 
             var albums = ExportAlbumsInfo(context, 9);
             Console.WriteLine(albums);
