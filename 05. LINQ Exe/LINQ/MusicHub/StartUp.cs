@@ -93,9 +93,9 @@ namespace MusicHub
 
             var songs = context
                 .Songs // have to do the includes or else it gives exc
-                .Include(s=>s.Writer)
-                .Include(s=>s.Album)
-                .ThenInclude(a=>a.Producer)
+                .Include(s => s.Writer)
+                .Include(s => s.Album)
+                .ThenInclude(a => a.Producer)
                 .ToList()
                 .Where(s => s.Duration.TotalSeconds > duration)
                 .Select(s => new

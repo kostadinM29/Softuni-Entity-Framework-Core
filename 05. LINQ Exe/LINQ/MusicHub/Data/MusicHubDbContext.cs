@@ -32,6 +32,7 @@ namespace MusicHub.Data
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
+                    .UseLazyLoadingProxies()
                     .UseSqlServer(Configuration.ConnectionString);
             }
             base.OnConfiguring(optionsBuilder); // not sure if needed
