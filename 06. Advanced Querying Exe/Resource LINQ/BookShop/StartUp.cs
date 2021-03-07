@@ -48,8 +48,8 @@ namespace BookShop
             //Console.WriteLine(GetBookTitlesContaining(db, command));
 
             //10. Book Search by Author
-            //var command = Console.ReadLine();
-            //Console.WriteLine(GetBooksByAuthor(db, command));
+            var command = Console.ReadLine();
+            Console.WriteLine(GetBooksByAuthor(db, command));
 
             //11.Count Books
             //var command = int.Parse(Console.ReadLine());
@@ -219,6 +219,11 @@ namespace BookShop
             /*Return all titles of books and their authors’ names for books, which are written by authors whose last names start with the given string.
              Return a single string with each title on a new row.
              Ignore casing.Order by book id ascending.*/
+
+            var books2 = context
+                .Books
+                .Where(b => b.Author.LastName.ToLower().StartsWith(input.ToLower()))
+                .ToList();
 
             var books = context
                 .Books
