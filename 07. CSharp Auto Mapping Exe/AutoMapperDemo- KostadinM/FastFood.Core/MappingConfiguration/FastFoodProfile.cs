@@ -49,14 +49,6 @@ namespace FastFood.Core.MappingConfiguration
 
             //Orders
 
-            this.CreateMap<Item, CreateOrderItemViewModel>() // have to create new view model
-               .ForMember(x => x.ItemId, y => y.MapFrom(s => s.Id))
-               .ForMember(x => x.ItemName, y => y.MapFrom(s => s.Name));
-
-            this.CreateMap<Employee, CreateOrderEmployeeViewModel>() // have to create new view model
-                .ForMember(x => x.EmployeeId, y => y.MapFrom(s => s.Id))
-                .ForMember(x => x.EmployeeName, y => y.MapFrom(s => s.Name));
-
             this.CreateMap<CreateOrderInputModel, Order>() // make new order
                 .ForMember(x => x.DateTime, y => y.MapFrom(s => DateTime.UtcNow))
                 .ForMember(x => x.Type, y => y.MapFrom(s => OrderType.ToGo));

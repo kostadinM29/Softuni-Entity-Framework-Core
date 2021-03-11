@@ -15,6 +15,15 @@
         {
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=FastFood;Trusted_Connection=True;MultipleActiveResultSets=true");
+            }
+            base.OnConfiguring(optionsBuilder);
+        }
+
         public DbSet<Category> Categories { get; set; }
 
         public DbSet<Employee> Employees { get; set; }
